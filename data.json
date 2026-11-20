@@ -1,0 +1,172 @@
+{
+  "suppliers": [
+    {
+      "id": "SUP-01",
+      "name": "Apex Precision Components",
+      "qualified": true,
+      "parts": [
+        "BRG-220",
+        "VAL-110"
+      ],
+      "capacity": 900,
+      "committed": 420,
+      "lead": 8,
+      "price": 18.5
+    },
+    {
+      "id": "SUP-02",
+      "name": "Northstar Industrial Supply",
+      "qualified": true,
+      "parts": [
+        "BRG-220",
+        "MTR-450"
+      ],
+      "capacity": 1200,
+      "committed": 500,
+      "lead": 5,
+      "price": 20
+    },
+    {
+      "id": "SUP-03",
+      "name": "Delta Motion Works",
+      "qualified": true,
+      "parts": [
+        "VAL-110",
+        "MTR-450"
+      ],
+      "capacity": 700,
+      "committed": 250,
+      "lead": 12,
+      "price": 16.8
+    },
+    {
+      "id": "SUP-04",
+      "name": "Unverified Global Parts",
+      "qualified": false,
+      "parts": [
+        "BRG-220"
+      ],
+      "capacity": 2000,
+      "committed": 0,
+      "lead": 4,
+      "price": 14
+    }
+  ],
+  "orders": [
+    {
+      "id": "PO-1001",
+      "supplier_id": "SUP-01",
+      "part": "BRG-220",
+      "qty": 180,
+      "value": 3330,
+      "unit_price": 18.5,
+      "status": "open",
+      "required_by": "2026-12-08",
+      "promised_days": 8,
+      "stock": 220,
+      "daily_use": 30
+    },
+    {
+      "id": "PO-1002",
+      "supplier_id": "SUP-02",
+      "part": "MTR-450",
+      "qty": 100,
+      "value": 2000,
+      "unit_price": 20,
+      "status": "open",
+      "required_by": "2026-12-03",
+      "promised_days": 5,
+      "stock": 80,
+      "daily_use": 20
+    },
+    {
+      "id": "PO-1003",
+      "supplier_id": "SUP-03",
+      "part": "VAL-110",
+      "qty": 240,
+      "value": 4032,
+      "unit_price": 16.8,
+      "status": "open",
+      "required_by": "2026-11-27",
+      "promised_days": 12,
+      "stock": 40,
+      "daily_use": 25
+    }
+  ],
+  "deliveries": [
+    [
+      "SUP-01",
+      true
+    ],
+    [
+      "SUP-01",
+      true
+    ],
+    [
+      "SUP-01",
+      false
+    ],
+    [
+      "SUP-01",
+      true
+    ],
+    [
+      "SUP-02",
+      true
+    ],
+    [
+      "SUP-02",
+      true
+    ],
+    [
+      "SUP-02",
+      true
+    ],
+    [
+      "SUP-02",
+      true
+    ],
+    [
+      "SUP-03",
+      false
+    ],
+    [
+      "SUP-03",
+      false
+    ],
+    [
+      "SUP-03",
+      true
+    ],
+    [
+      "SUP-04",
+      true
+    ]
+  ],
+  "quality": [
+    {
+      "supplier_id": "SUP-01",
+      "bad": 12,
+      "checked": 600,
+      "severity": "minor"
+    },
+    {
+      "supplier_id": "SUP-02",
+      "bad": 3,
+      "checked": 700,
+      "severity": "minor"
+    },
+    {
+      "supplier_id": "SUP-03",
+      "bad": 42,
+      "checked": 500,
+      "severity": "major"
+    },
+    {
+      "supplier_id": "SUP-03",
+      "bad": 18,
+      "checked": 300,
+      "severity": "critical"
+    }
+  ]
+}
